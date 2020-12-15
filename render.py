@@ -18,13 +18,18 @@ def write_temp(temp):
         log.write("{​​​​​​​0}​​​​​​​,{​​​​​​​1}​​​​​​​\n".format(strftime("%Y-%m-%d %H:%M:%S"),str(temp)))
 '''
 def data_collection():
-    x =[]
-    y =[]
-    for i in range(1,21):
-        y.append(20.0 + random.random() * 15)
-        x.append(time() * i)
-    
-    graph(x,y)
+    try:
+        x =[]
+        y =[]
+        for i in range(1,21):
+            y.append(20.0 + random.random() * 15)
+            x.append(time() * i)
+        graph(x,y)
+    except KeyboardInterrupt as e:
+        print('closing gracefully!')
+    except Exception as e:
+        print('closing gracefully!')
+
 
 
 def graph(x,y):
@@ -50,3 +55,6 @@ while True:
     #graph(temp)
     
     plt.pause(2)
+
+if __name__ == "__main__":
+    data_collection()
