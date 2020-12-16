@@ -49,7 +49,7 @@ def alert ():
 def graph(x,y1,y2):
     fig = Figure()
     #plt = fig.add_subplot()
-    mat.use('tkagg')
+    mat.use('Agg')
     title = alert()
     plt.clf()
     plt.scatter(x,y1)
