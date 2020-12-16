@@ -59,7 +59,7 @@ def graph(x,y1,y2):
     plt.xlabel('Time in Seconds')
     plt.ylabel('Weather condition')
     plt.title(label = title)
-    plt.legend(bbox_to_anchor=(1, 1))
+    plt.legend(loc = 'best')
     plt.savefig('fig1.png')
     #return fig
     #plt.show()
